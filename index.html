@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Billionaire API Apps</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-center text-5xl font-bold text-lime-500 my-5">
+        Billionaire API Apps
+      </h1>
+    </header>
+
+    <section class="px-14">
+      <div class="grid grid-cols-12">
+        <div class="col-span-2 bg-slate-700 text-center h-screen">
+          <h1 class="text-slate-200 font-semibold">
+            BILLIONAIRE <br />
+            DIARY
+          </h1>
+          <div class="flex justify-center mt-5">
+            <button
+              onclick="showAllBillionaire()"
+              class="bg-white font-semibold w-40 py-2"
+            >
+              Show All Billionaires
+            </button>
+          </div>
+          <div class="flex justify-center mt-5">
+            <button
+              id="richestByIndustry"
+              class="bg-white font-semibold w-40 py-2"
+            >
+              Richest by Industry <br />(Technology)
+            </button>
+          </div>
+          <div class="flex justify-center my-5">
+            <p class="bg-white font-semibold w-40 py-2">Richest by States</p>
+          </div>
+        </div>
+        <div id="all-billionaire" class="col-span-10 bg-slate-200 pl-5 hidden">
+          <div>
+            <h2>Hello, Billionaires User</h2>
+            <table class="w-11/12">
+              <thead>
+                <tr>
+                  <th class="py-3">Person</th>
+                  <th class="py-3">Citizenship</th>
+                  <th class="py-3">Industry</th>
+                  <th class="py-3">Rank</th>
+                  <th class="py-3">Wealth</th>
+                </tr>
+              </thead>
+              <tbody id="table-container"></tbody>
+            </table>
+          </div>
+        </div>
+        <div id="all-industry" class="col-span-10 bg-slate-200 hidden">
+          <div id="container" class="grid grid-cols-3 gap-x-5 px-5"></div>
+          <div id="sell-all-btn" class="flex justify-center">
+            <button
+              onclick="seeAllButton()"
+              class="btn btn-primary mt-8 text-center"
+            >
+              See All
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- script  -->
+    <script src="js/billionare.js"></script>
+  </body>
+</html>
